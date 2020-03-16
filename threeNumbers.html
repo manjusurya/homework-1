@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+               <form >
+                <table class="table">
+                    <h1>ENTER THE NUMBERS</h1>
+                    <tr>
+                        <td>NUMBER 1</td>
+                        <td><input type="text" class="form-control" id="num1"></td>
+                    </tr>
+                    <tr>
+                        <td>NUMBER 2</td>
+                        <td><input type="text" class="form-control" id="num2"></td>
+                    </tr>
+                    <tr>
+                        <td>NUMBER 3</td>
+                        <td><input type="text" class="form-control" id="num3"></td>
+                    
+                
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button type="button" class="btn btn-success" onclick="check();">FIND LARGEST</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><p id="result"></p></td>
+                    </tr>
+                </table>
+               </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function check(){
+            var x=parseInt(document.getElementById("num1").value);
+            var y=parseInt(document.getElementById("num2").value);
+            var z=parseInt(document.getElementById("num3").value);
+            if (x>y) {
+                if (x>z) {
+                    var p=x+"is the largest number"
+                    
+                } else {
+                    var p=z+"is the largest number"
+                    
+                }
+                
+                
+            } else {
+                if (z>y) {
+                    var p=z+"is the largest number"
+                    
+                } else {
+                    var p=y+"is the largest number"
+                    
+                }
+                
+            }
+            console.log(p);
+            document.getElementById("result").innerHTML=p;
+
+
+        }
+
+    </script>
+    
+</body>
+</html>
